@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # add polls app to current proj
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -72,6 +74,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+# ENGINE: sqlite3, postgresql, mysql, oracle
+# NAME: name of DB (sqlite3->absolute path)
 
 DATABASES = {
     'default': {
@@ -101,11 +105,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
+# default = 'en-us'
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+# Timezone
+# default = 'UTC'
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+TIME_ZONE = 'Asia/Seoul' 
 
 USE_I18N = True
 
